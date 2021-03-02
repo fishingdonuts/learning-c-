@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main()
+{
+
+char ch;
+printf("Enter a character");
+scanf("%ch", &ch);
+printf("%ch", ch);
+
+((ch>96)&&(ch<123))? printf("lower case \n");
+((ch>64)&&(ch<91))? printf("upper case \n");
+((ch>47)&&(ch<56))? printf("digit \n");
+printf("special character")
+
+}
+
+
+//charcater has 

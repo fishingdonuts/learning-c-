@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main()
+{
+
+int a,b,c;
+
+printf("Enter three integers a,b & c:"); 
+scanf ("id id td",&a, &b, &c);
+
+((a>b)&&(a>c))?printf("a max\n"): 
+
+((b>a)&&(b>c))?printf("b max\n"):
+
+((c>a)&& (c>b))?printf("c max\n"):
+
+((a==b)&& (a>c))?printf("a & b max\n"):
+
+((b==c)&&(b>a))?printf("b & c max\n" ): 
+
+((c==a)&&(c>b))?printf("c & a max\n"):
+
+printf("a,b & C max\n");
+
+}

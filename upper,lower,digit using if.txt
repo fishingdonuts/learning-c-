@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+
+char ch;
+
+puts("Enter a character:"); ch-getchar();
+
+if ((ch>='a') && (ch<='z')) printf("lowercase\n");
+
+if ((ch>='A') && (ch<='Z')) printf("uppercase\n");
+
+if ((ch>='0') && (ch<='9')) printf ("digit\n");
+
+if(!(((ch>='a') && (ch<='z'))||((ch>='A')&&(ch<='Z'))|| ((ch>='0')&&(ch<='9' )))) 
+printf("special character\n");
+
+}
+
+
+// NOTE : In an if else statement, if the code does not end with a final ELSE statement, and ends with an ELSE IF statement, 
+the compikler will not show that as an error, and instead will be a bug. 

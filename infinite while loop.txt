@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() 
+{
+      char ch=0;
+      while (ch<=127)
+      {
+            printf("In the Loop %d \n",ch);
+            ch++;
+      }
+}
+
+
+// This will be an infinite loop, becasue once ch value is increased upto 127, 
+then increasing ch further will make it -128. Since -128 <=127, 
+the condition is TRUE and the loop goes on and on.

@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() 
+{
+      int a=1,b=1;
+      while(a<=5)
+      {
+            b=1;
+            while(b<=5)
+            {
+                  printf("%3d",a*b);
+                  b++;
+            }
+      printf("\n");
+      a++;
+      }
+}
+
+
+// printf("%3d",a*b); %3d is used to make proper alignment in printing.
+// It will allocated 3 character's space for one interger

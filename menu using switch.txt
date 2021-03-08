@@ -1,0 +1,56 @@
+#include <stdio.h>
+int main() 
+{
+       int data,bit,result;
+       char input;
+INPUT: printf("Enter Data:");
+       scanf("%d",&data);
+BIT:   printf("Enter Bit:");
+       scanf("%d",&bit);
+       if(!((bit>=0)&&(bit<=31)))  
+       {
+          printf("Enter valid Bit position");
+          goto BIT;
+       }      
+LOOP:  printf("\nMENU\n");
+       printf("t/T\t Test Bit\n");
+       printf("s/S\t Set Bit\n");
+       printf("c/C\t Clear Bit\n");
+       printf("m/M\t Complement Bit\n");
+       printf("i/I\t Input Again\n");
+       printf("e/E\t Exit\n");
+       printf("Enter your choice:\n");
+       scanf("%c",&input);
+       switch(input)
+       {
+          case 't':
+          case 'T': result = ((data>>bit)&1);
+                    printf("result=%d\n,result");
+                    goto LOOP;
+
+          case 's':
+          case 'S': result = (data|(1<<bit));
+                    printf("result=%d\n,result");
+                    goto LOOP;
+
+          case 'c':
+          case 'C': result = (data&~(1<<bit));
+                    printf("result=%d\n,result");
+                    goto LOOP;
+
+          case 'm':
+          case 'M': result = (data^(1<<bit));
+                    printf("result=%d\n,result");
+                    goto LOOP;
+
+          case 'i':
+          case 'I': goto INPUT;
+
+          case 'e':
+          case 'E': return;
+       }
+
+}
+
+
+        

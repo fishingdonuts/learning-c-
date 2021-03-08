@@ -1,0 +1,105 @@
+// USING IF
+
+#include<stdio.h>
+int main()
+
+{
+    int a,b,c,d,e;
+    float p;
+    printf("Enter 5 subject marks:");
+    scanf("%d %d %d %d %d",&a,&b,&c,&d,&e);
+    p=((a+b+c+d+e)/5);
+    printf("Scored Percentage : %f\n",p);
+    printf("Earned Grade : ");
+
+
+if ((p>=0)&&(p<40)) 
+printf("fail\n");
+
+if((p>=40)&&(p<50))
+printf("3rd class\n");
+
+if((p>=50) & (p<60))
+printf("2nd class\n");
+
+if((p>=60)&&(p<75)) 
+printf("1st class\n");
+
+if((p>=75)&&(p<100)) 
+printf("Distinction\n");
+
+}
+
+
+//USING ELIF
+
+#include<stdio.h>
+int main()
+
+{
+    int a,b,c,d,e;
+    float p;
+    printf("Enter 5 subject marks:");
+    scanf("%d %d %d %d %d",&a,&b,&c,&d,&e);
+    p=((a+b+c+d+e)/5);
+    printf("Scored Percentage : %f\n",p);
+    printf("Earned Grade : ");
+
+
+if((p>=0)&&(p<40))
+    printf("fail\n"); 
+
+else if((p>=40)&&(p<50))
+    printf("3rd class\n"); 
+    
+else if((p>=50)&&(p<60)) 
+    printf("2nd class\n");
+
+else if((p>=60)&&(p<75))
+    printf("1st class\n");
+
+else
+    printf("distinction\n");
+
+}
+
+
+
+// USING NESTED IF
+
+
+#  int a,b,c,d,e;
+    float p;
+    printf("Enter 5 subject marks:");
+    scanf("%d %d %d %d %d",&a,&b,&c,&d,&e);
+    p=((a+b+c+d+e)/5);
+    printf("Scored Percentage : %f\n",p);
+    printf("Earned Grade : ");
+
+include<stdio.h>
+int main()
+
+{
+  
+if(p>40)
+{
+    if(p>50)
+    {
+        if(p>60)
+        {
+            if(p>75)
+                printf("Distinction\n");
+            else
+                printf("1st Class\n");
+        }
+        else
+            printf("2nd Class\n");
+    }
+    else 
+        printf("3rdClass\n");
+}
+else    
+   printf("Failed\n");
+
+}
+

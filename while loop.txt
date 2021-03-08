@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() 
+{
+      short int v= 1;
+      while(v)
+      {
+            printf("in the loop %d \n, v");
+            v++;
+      }
+
+      printf(" NOT in the loop %d \n, v");
+}
+
+
+// Here, the value of v will be increased to maximum posiitve value of short  integer (32767), 
+and then will be -32767 and start increasing. The look will terminate when it reaches 0.      

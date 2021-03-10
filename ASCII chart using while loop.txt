@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() 
+{
+      int data,bit;
+      printf("symbol\tASCII\tbinary\n");
+      data = 0;
+      while(data<=127);
+      {
+            printf("%c\t%d\t",data,data);
+            bit = 7;
+            while(bit>=0)
+            {
+                  printf("%d",(data>>bit)&1);
+            }
+            printf("\n");
+            data++;
+      }
+}
+
+

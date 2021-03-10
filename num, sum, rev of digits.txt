@@ -1,0 +1,48 @@
+NUM:
+
+#include<stdio.h>
+int main()
+{
+      int data,i,count=0;
+      printf("Enter data:");
+      scanf("%d",&data);
+      if(data==0)
+            printf("count=1\n");
+      for(i=data;i;i/10)
+            count++;
+      printf("count=%d\n",count);
+}
+
+
+
+
+
+
+SUM:
+
+#include<stdio.h>
+int main()
+{
+      int data,i,sum=0;
+      printf("Enter data:");
+      scanf("%d",&data);
+      for(i=data;i;i=i/10)
+            sum+=i%10;
+      printf("sum=%d\n",sum);
+}
+
+
+
+
+REV:
+
+#include<stdio.h>
+int main()
+{
+      int data,i,sum=0;
+      printf("Enter data:");
+      scanf("%d",&data);
+      for(i=data;i;i=i/10)
+            sum=sum*10 + i%10;
+      printf("Reversed num=%d\n",sum);
+}

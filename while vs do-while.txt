@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+      int num, cnt=0;
+      // using do while 
+      do
+      {
+            cnt++;
+      } while (num);
+
+
+      // using while loop
+      while(num)
+      {
+            num=num/10;
+            cnt++;
+      }
+
+}
+
+
+
+// WHILE is an entry controlled loop, executes at least '0' times.
+// DO WHILE is an exit controlled loop, executes at least '1' time.
+

@@ -1,0 +1,68 @@
+#include<stdio.h>
+#include<math.h>
+void prime(void)
+{
+      int num,s,i;
+      printf("Enter Number:");
+      scanf("%d",&num);
+      s=sqrt(num);
+      for(i=2;i<=s;i++)
+      {
+            if((num%i)==0)
+                  break;
+      }
+      if(i==s+1)
+            printf("%d is prime\n",num);
+      else
+            printf("%d is not prime\n",num);
+
+}
+int main()
+{
+	prime();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+USING FUNCTIONS:
+
+#include<stdio.h>
+#include<math.h>
+int testPrime(int);
+
+int main()
+{
+      int v,min,max;
+      printf("Enter Range:");
+      scanf("%d %d", &min, &max);
+      for(v=min;v<=max;v++)
+      {
+            if(testPrime(v)==1)
+                  printf("%d, ",v);
+      }
+}
+
+int testPrime(int v);
+
+{
+      int s,flag=0;
+      s=sqrt(v);
+      for(i=2;i<=s;i++)
+      {
+            if(v%i==0)
+                  break;
+      }
+      if(i==(s+1))
+            flag=1;
+      return flag;
+}

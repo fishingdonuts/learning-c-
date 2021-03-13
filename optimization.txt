@@ -1,0 +1,40 @@
+//NOT FOR TURBO C. WORKS FOR GCC.
+
+
+OPTIMIZATION:
+
+#include<stdio.h>
+void print(int x, int y, int z)
+{
+      printf("%d,%d,%d",x,y,z);
+}
+int main()
+{
+      int a=10, b=20;
+      print(a,a=b,a=0);
+}
+
+
+o/p: 20,20,20
+
+
+o/p > 20, 20, 20
+
+In such case, it is compiler's choice to pass which values of a. x,y and z will receive value of a. 
+So compiler will pass final value of a in print()'s all arguments. a's final value is 20 after operation a=b; 
+so 20 will be passed to x,y and z. 
+
+This method of passing final value of variable to the arguments which are receiving same variable is called OPTIMIZATION.
+
+
+
+NOTE:
+If scanf() statement is used to enter values of variables, compiler doesn't know what values will be entered by user at runtime. 
+So compiler will not do optimization in programs in which scanf is used. Because scanf() statement requires address of variables, 
+so when address of variable is used in program, compiler will not optimize it. 
+
+
+NOTE 2: 
+In case of increments:
+Post-Increment will NOT be optimized. eg.: a++
+Pre-Increments will be optimized. eg.:++a

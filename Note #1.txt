@@ -1,0 +1,49 @@
+int a=2, b=4, c=0;
+c=a, b=c;
+
+//c=a,b=c; valid, b and c value will be 0 after this statement. In the right hand side,
+two statements are grouped using comma. So execution will be from left to right. So 
+first'a' will be executed, but only a is no meaning, so then b=c will be executed, and 
+thenright most result, b is assigned to c(c=b).
+
+
+
+
+//CONTINUE:
+if executed, passes the control to the starting of the loop by skipping the statements below it.
+
+usage:
+
+for (i=1;i<=20;i++)
+{
+	if(i%3==0)
+		continue;
+	printf("%d",i);
+}
+
+
+
+
+
+
+//PRINT()
+
+
+#include<stdio.h>
+int main()
+
+
+{
+     int a=10,b=20;
+     print(a=b,a==b);            //(a==b)--->0 will be passed first, then (a=b)--->20 will be passed.
+}
+print(int x,int y)
+{
+      printf("%d,%d",x,y);
+}
+
+
+
+
+
+

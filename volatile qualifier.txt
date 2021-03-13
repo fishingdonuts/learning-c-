@@ -1,0 +1,17 @@
+#include<stdio.h>
+void print(int x, int y, int z)
+{
+      printf("%d,%d,%d",x,y,z);
+}
+int main()
+{
+      volatile int a=5,b=6;
+      print(a=b,a=0,a=20);
+}
+
+
+When volatile type qualifier is used, then compiler is informed not to take advantage of CPU registers and every usage of 
+variable will be from its actual location. Taking advantage of CPU register is one of the way of optimizing the code by compiler. 
+In which if a variable is to be successively used for some time, instead of reading that variable from memory every time, 
+its copy is saved in CPU register and operations on that variable is done from register. 
+This is so because operations on register are faster that operations on memory.

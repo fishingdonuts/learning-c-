@@ -1,0 +1,8 @@
+In some programs where int main() is used, return 0; statement is used. Similarly to introduce exit procedure at some part of program, 
+exit(0); is used. So why O is used with these two statements and not any other integer?
+
+Operating system should know that when a process terminates, it issuccess termination or failure termination. So for that, 
+processes are designed to return values to OS so that it could know about the Termination.
+
+0 -> successful termination
+1 -> failed termination

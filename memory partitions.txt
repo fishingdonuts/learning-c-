@@ -1,0 +1,9 @@
+Befor the execution of a program starts, a stack is allocated by the OS, the size of which depends upon the OS.
+
+LIFO (last in, first out) stack : Contains the fucntions return adderess.
+                                : formal arguments
+                                : local variables
+
+Heap : used for dynamic memory allocation. Not allocated, free section of memory
+
+Out : cointains text section and data section. Text section contains the code. Data section contains global and static variables.

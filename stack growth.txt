@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+void f2(int a)
+{ 
+    printf("f2: a=%d at %u\n",a,&a);
+    a=a+10;
+    printf("f2 returning: a=%d at %u\n,a,%a");
+}
+
+void f1(int a)
+{
+    printf("f1: a=%d at %d at%u\n",a,&a);
+    f2(a++);
+    printf("f1 returing: a+%d at %u\n",a&a);
+}
+
+int main()
+{
+    int a = 1;
+    printf("f1: a+%d at %u\n",a,&a);
+    f1(a+1);
+    printf("main returing: a=%d at %u\n",a,&a);
+}
+
+
+//From the o/p we can tell the stack is down growing.

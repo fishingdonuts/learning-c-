@@ -1,0 +1,42 @@
+
+
+4 main Storage Classes: Auto, Register, External, Static
+
+
+In case of functions, Static and External can be used.
+
+If storage class is not provided to a variable inside a function, it's defaulted as Auto.
+If storage class is not provided to a variable outside a function, it's defaulted as External.
+
+
+
+Auto:
+
+Memory: stack
+Life: starts with function call, destroyed with return
+Scope: visible to function when declared
+DIV: undefined/garbage
+
+
+Rgister:
+
+Memory: prefers CPU register, but guaranteed in stack
+Life: same as Auto
+Scope: same as Auto
+DIV: same as Auto
+
+
+External:
+
+Memory: data section
+Life: starts at app execution, end at termination
+Scope: visible to all executable functions
+DIV: 0
+
+
+Static:
+
+Memory: same as external
+Life: same as external
+Scope: visible to functions where declared
+DIV: same as external

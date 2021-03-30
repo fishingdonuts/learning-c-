@@ -1,0 +1,81 @@
+RECURSION: 
+
+If a function calls itself it is called a recursive function.
+
+
+
+#include <stdio.h>
+
+int main()
+{
+   int v=0;
+   v++;
+   printf("in main : v = %d\n",v);
+   if(v<=5)
+        main();
+   printf("returning from main\n");
+   return;
+}
+
+
+// Here a local variable is used to conrtol repetitions. Initially, v will be 0, 
+and then incremented to 1. Since the condition is satidfied, it will run again in a loop,
+until the stack is overflown.
+
+// Instead if  a static variable is used in place of the local variable,
+then the repetitions can be controlled better, as shown below.
+
+
+#include <stdio.h>
+
+int main()
+{
+   static int v=0;
+   v++;
+   printf("in main : v = %d\n",v);
+   if(v<=5)
+        main();
+   printf("returning from main\n");
+   return;
+}
+
+
+
+
+Code for factorial of 'n' using Recursion:
+
+#include <stdio.h>
+
+int fact(int n)
+{
+    if(n<=1)
+        return 1;
+    return(n*fact(n-1));
+}
+int main()
+{
+    int n,f;
+    printf("Enter a value for n: ");
+    scanf("%d",&n);
+    f=fact(n);
+    printf("the factorial of %d is %d\n",n,f);
+}
+
+
+
+
+
+
+
+LOOP v/s RECURSION
+
+LOOP:
+  - execusion is faster becasue no push and pop operations
+  - no possibility of stack overflow
+
+
+RECURSION:
+  - stack may overflow if a large number of calls occour
+  - execution is better because of push and pop operations
+
+

@@ -1,0 +1,45 @@
+//GENERATES RANDOM NUMBERS
+
+#include <stdio.h>
+
+int main()
+{
+    int a[10],i;
+    for(i=0;i<10;i++)
+        a[i]=rand()%101;
+    for(i=0;i<10;i++)
+        printf("%d",a[i]);
+}
+
+
+// NUMBERS GENERATED WILL BE SAME, EVEN AFTER RUNING THE CODE AGAIN.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include <stdio.h>
+
+int main()
+{
+    int a[10],i;
+    srand(getpid());
+    for(i=0;i<10;i++)
+        a[i]=rand()%101;
+    for(i=0;i<10;i++)
+        printf("%d",a[i]);
+}
+
+
+
+// NUMBERS GENERATED WILL NOT BE SAME, EVEN AFTER RUNING THE CODE AGAIN.
